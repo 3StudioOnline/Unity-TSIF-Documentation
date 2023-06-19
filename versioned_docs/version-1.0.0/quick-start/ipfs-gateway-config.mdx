@@ -1,0 +1,21 @@
+---
+sidebar_position: 2
+title: IPFS Gateway Config
+---
+import {Step} from '@site/src/lib/utils.mdx'
+
+## Get IPFS Gateway Config Function
+
+```cs
+Ipfs.GetIpfsHttpGatewayConfig(IpfsHttpGateway ipfsHttpGateway)
+```
+
+This a helper function that holds default information for commonly used `IPFS` gateways.
+
+:::note
+Additional gateways will be added in future updates if needed.
+:::
+
+This function returns an `IpfsHttpGatewayConfig` object that contains:
+* `Url`: The gateway URL to send the Http requests to.
+

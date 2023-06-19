@@ -1,0 +1,22 @@
+---
+sidebar_position: 3
+title: IPFS Pinning Service Config
+---
+import {Step} from '@site/src/lib/utils.mdx'
+
+## Get IPFS Pinning Service Config Function
+
+```cs
+Ipfs.GetIpfsPinningServiceConfig(IpfsPinningService ipfsPinningService)
+```
+This is a helper function that holds default information for commonly used `IPFS`
+pinning services.
+
+:::note
+Additional pinning services will be added in future updates if needed.
+:::
+
+This function returns an `IpfsPinningServiceConfig` object that contains:
+* `Url`: The pinning service API endpoint URL.
+* `Name`: The name of the pinning service API endpoint provider.
+

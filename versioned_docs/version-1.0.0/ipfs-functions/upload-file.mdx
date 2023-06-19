@@ -1,0 +1,62 @@
+---
+sidebar_position: 6
+title: Upload File
+---
+
+import {Step} from '@site/src/lib/utils.mdx'
+
+## Upload File Function (Task)
+
+```cs
+Task<> IPFS.IpfsFunctionLibrary.UploadFile(
+    IpfsPinningServiceConfig ipfsPinningServiceConfig,
+    string bearerToken,
+    string fileToUpload,
+    string saveAs)
+```
+
+This function uploads a local file to the *IPFS* network. This function requires inputs as follows:
+
+* `ipfsPinningServiceConfig`: Holds the URL and name of the pinning service to send the request to.
+* `bearerToken`: The API token for authentication.
+* `fileToUpload`: The path of the file to upload.
+* `saveAs`: Optional alternate filename for the uploaded file on IPFS. If left empty, the original filename will be used.
+
+The returned *Response* is a `Task` that holds data such as headers, status code, and body of the response of the HTTP
+request.
+
+```cs
+Task<(bool success, string errorMessage, HttpResponse response, string cid)>
+```
+
+:::info
+If `success` is `true` that only means the upload to the *IPFS* network was successful.
+:::
+
+If successful, returns the `cid` of the uploaded file in *string* format.
+
+
+
+## Upload File Function (Delegate)
+
+```cs
+void IPFS.IpfsFunctionLibrary.UploadFile(
+    IpfsPinningServiceConfig ipfsPinningServiceConfig,
+    string bearerToken,
+    string fileToUpload,
+    string saveAs,
+    IpfsUploadFileDelegate responseDelegate)
+```
+
+This is a wrapper function for the async implementation. It exists to provide
+the same functionality but using a delegate for handling responses.
+
+```cs
+delegate void IpfsUploadFileDelegate(
+    bool success,
+    string errorMessage,
+    HttpResponse response,
+    string cid)
+```
+
+
