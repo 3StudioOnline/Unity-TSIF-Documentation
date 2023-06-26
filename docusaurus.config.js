@@ -8,8 +8,7 @@ const url3StudioWebsite = "https://3studio.online";
 const urlUnrealMarketplaceProduct_TSIF = "https://www.unrealengine.com/marketplace/en-US/product/b8a5ef2c915c4359b7e66d08a85d4c74";
 const urlUnrealMarketplaceProduct_TSBC = "https://www.unrealengine.com/marketplace/en-US/product/fc42c8121e0d445f8887ed6962af796e";
 const urlUnrealMarketplaceProduct_TSAI = "https://www.unrealengine.com/marketplace/en-US/product/a730dd3ff54a45db94120b4fa9cae124";
-const urlUnityAssetStoreProduct_TSIF = "https://TODO";
-// const urlUnityAssetStoreProduct_TSBC = "https://TODO";
+const urlUnityAssetStoreProduct_TSIF = "https://https://assetstore.unity.com/packages/slug/246687";
 const urlDiscordInviteLink = "http://discord.3studio.online";
 const urlGitHubRepository = "https://github.com/3StudioOnline/Unity-TSIF-Documentation";
 const urlGitHubIssueTracker = `${urlGitHubRepository}/issues`;
@@ -29,7 +28,7 @@ const config = {
     title: "3S Game Studio IPFS Plugin for Unity",
     tagline: "IPFS is a decentralized storage protocol, that allows you to upload, download and stream to memory any kind of files.",
     organizationName: "3StudioOnline", // Usually your GitHub org/user name.
-    projectName: "TSIF-Documentation", // Usually your repo name.
+    projectName: "Unity-TSIF-Documentation", // Usually your repo name.
     deploymentBranch: "gh-pages",
 
     url: "https://3StudioOnline.github.io",
@@ -193,10 +192,6 @@ const config = {
                                 label: "IPFS Plugin",
                                 href: urlUnityAssetStoreProduct_TSIF,
                             },
-                            // {
-                            //     label: "Blockchain Plugin",
-                            //     href: urlUnityAssetStoreProduct_TSBC,
-                            // },
                         ],
                     },
 
